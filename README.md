@@ -1,12 +1,17 @@
-## API de Gestión de Facturación ##  
+## Proyecto Clientes — API REST ##  
+
+**Aprendiz:** María Paula Aguilera Reina  
+**Ficha:** 3407184
+
+---
+
+## Descripción
 
 API REST desarrollada con FastAPI para administrar clientes, facturas y transacciones. El proyecto utiliza SQLModel como ORM y SQLite como base de datos, permitiendo realizar operaciones CRUD y calcular el valor total de las facturas.
 
 ## Características ## 
  
-* Gestión de clientes.
-* Gestión de facturas.
-* Gestión de transacciones.
+* Gestión de clientes, facturas y transacciones.
 * Cálculo automático del valor total de una factura.
 * Base de datos SQLite.
 * Documentación automática con Swagger UI.
@@ -23,27 +28,26 @@ API REST desarrollada con FastAPI para administrar clientes, facturas y transacc
 ##  Estructura del Proyecto ##
 
 ```text
-p.y.t.h.o.n/
-│
-├── app/
-│   ├── models/
-│   │   ├── clientes.py
-│   │   └── facturas.py
+📦 p.y.t.h.o.n/
+├── 📁 app/
+│   ├── 📁 models/
+│   │   ├── clientes.py              # Modelo de clientes
+│   │   └── facturas.py              # Modelo de facturas
 │   │
-│   ├── routers/
-│   │   ├── clientes.py
-│   │   ├── facturas.py
-│   │   └── transacciones.py
+│   ├── 📁 routers/
+│   │   ├── clientes.py              # CRUD de clientes
+│   │   ├── facturas.py              # CRUD de facturas
+│   │   └── transacciones.py         # CRUD de transacciones
 │   │
-│   ├── conexion_bd.py
-│   └── main.py
+│   ├── 📄 conexion_bd.py            # Configuración de la base de datos
+│   └── 📄 main.py                   # Punto de entrada de la API
 │
-├── requirements.txt
-├── .gitignore
-└── README.md
+├── 📄 requirements.txt              # Dependencias del proyecto
+├── 📄 .gitignore                    # Archivos ignorados por Git
+└── 📄 README.md                     # Documentación del proyecto
 ```
 
-##  Instalación ##
+##  Instalación 
 
 ### 1. Clonar el repositorio
 
@@ -72,25 +76,24 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
+Sabrás que está activo porque verás `(venv)` al inicio de tu terminal.
+
 ### 4. Instalar dependencias
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Ejecutar la Aplicación ##
-
-Desde la carpeta raíz del proyecto:
+### 5. Ejecutar el servidor
 
 ```bash
-uvicorn app.main:app --reload
+uvicorn main:app --reload
 ```
 
-El servidor quedará disponible en:
+La API estará disponible en: `http://127.0.0.1:8000`  
+Documentación interactiva en: `http://127.0.0.1:8000/docs`
 
-```text
-http://127.0.0.1:8000
-```
+---
 
 ##  Documentación de la API ##
 
@@ -165,10 +168,12 @@ Respuesta:
 }
 ```
 
-##  Autor ##
+## Desactivar el entorno virtual
 
-Proyecto desarrollado como práctica de desarrollo backend utilizando FastAPI, SQLModel y SQLite. por Dilan Santiago Carreño.
+```bash
+deactivate
+```
 
-##  Licencia ##
+---
 
-Este proyecto se distribuye con fines académicos y educativos.
+*Aprendiz SENA — Ficha 3407184*
